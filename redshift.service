@@ -1,0 +1,12 @@
+[Unit]
+Description=Redshift - set color temperature of display according to time of the day
+Documentation=man:redshift(1)
+PartOf=graphical-session.target
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/redshift
+
+[Install]
+WantedBy=graphical-session.target

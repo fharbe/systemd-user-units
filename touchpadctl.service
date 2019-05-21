@@ -1,0 +1,11 @@
+[Unit]
+Description=Control touchpad for X session
+PartOf=graphical-session.target
+After=graphical-session.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/env touchpadctl off
+
+[Install]
+WantedBy=graphical-session.target

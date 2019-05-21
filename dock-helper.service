@@ -1,0 +1,13 @@
+[Unit]
+Description=Dock helper service
+PartOf=dock.target
+After=dock.target
+RefuseManualStart=yes
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStop=/bin/systemctl --no-block --user start undock.target
+
+[Install]
+WantedBy=dock.target

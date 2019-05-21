@@ -1,0 +1,13 @@
+[Unit]
+Description=Profile-sync-daemon resync service
+Wants=psd-resync.timer
+After=psd.service
+PartOf=psd.service
+RequiresMountsFor=%h %t
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/env profile-sync-daemon resync
+
+[Install]
+WantedBy=graphical-session.target

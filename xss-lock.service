@@ -1,0 +1,15 @@
+[Unit]
+Description=XScreenSaver Utility
+Documentation=man:xss-lock(1)
+PartOf=graphical-session.target
+After=graphical-session.target
+
+[Service]
+Type=simple
+Environment="UTILS=%E/herbstluftwm/utils"
+ExecStart=/usr/bin/xss-lock --ignore-sleep -l -s ${XDG_SESSION_ID} -n ${UTILS}/dim-screen.sh -- ${UTILS}/i3lock.sh
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=graphical-session.target

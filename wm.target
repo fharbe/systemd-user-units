@@ -1,0 +1,7 @@
+[Unit]
+Description=Current window manager session
+Documentation=man:systemd.special(7)
+BindsTo=graphical-session.target
+After=graphical-session.target
+RefuseManualStart=yes
+StopWhenUnneeded=yes

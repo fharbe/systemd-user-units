@@ -1,0 +1,7 @@
+[Unit]
+Description=Herbstluftwm session leader
+Documentation=man:herbstluftwm(1) man:herbstclient(1) man:herbstluftwm-tutorial(7)
+Requires=basic.target
+BindsTo=graphical-session.target herbstluftwm-session.target
+After=graphical-session.target graphical-session-pre.target
+Before=herbstluftwm-session.target

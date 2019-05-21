@@ -1,0 +1,18 @@
+[Unit]
+Description=URxvt terminal daemon
+Documentation=man:urxvtd(1) man:urxvt(1)
+Requires=urxvtd.socket
+PartOf=graphical-session.target
+After=graphical-session.target
+RequiresMountsFor=%t
+
+[Service]
+Type=simple
+Environment=RXVT_SOCKET=%t/urxvtd-%H.sock
+ExecStart=/usr/bin/urxvtd -q -o
+KillMode=control-group
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=graphical-session.target

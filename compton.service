@@ -1,0 +1,15 @@
+[Unit]
+Description=Compton X11 compositor
+Documentation=man:compton(1) man:compton-trans(1)
+PartOf=graphical-session.target
+After=graphical-session.target
+Conflicts=compton@.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/compton --config %E/compton/compton.conf
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=graphical-session.target

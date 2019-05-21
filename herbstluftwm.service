@@ -1,0 +1,16 @@
+[Unit]
+Description=Herbstluftwm session
+Documentation=man:herbstluftwm(1) man:herbstclient(1) man:herbstluftwm-tutorial(7)
+BindsTo=wm.target
+PartOf=herbstluftwm.target herbstluftwm-session.target
+After=herbstluftwm.target herbstluftwm-session.target
+RefuseManualStart=yes
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/herbstluftwm --locked
+ExecReload=/usr/bin/herbstclient reload
+
+[Install]
+WantedBy=herbstluftwm-session.target
+Alias=window-manager.service

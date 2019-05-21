@@ -1,0 +1,15 @@
+[Unit]
+Description=Set the keyboard layout using the X Keyboard Extension
+Documentation=man:setxkbmap(1)
+Wants=xmodmap.service
+PartOf=graphical-session.target
+After=graphical-session.target
+Before=xmodmap.service
+
+[Service]
+Type=oneshot
+EnvironmentFile=%E/xkbmap.conf
+ExecStart=/usr/bin/setxkbmap -model ${XKBMODEL} -layout ${XKBLAYOUT} -variant ${XKBVARIANT} -option $XKBOPTIONS
+
+[Install]
+WantedBy=graphical-session.target

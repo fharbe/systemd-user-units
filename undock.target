@@ -1,0 +1,4 @@
+[Unit]
+Description=Services which should run when machine is undocked
+Conflicts=dock.target
+StopWhenUnneeded=yes

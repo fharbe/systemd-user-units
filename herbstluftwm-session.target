@@ -1,0 +1,9 @@
+[Unit]
+Description=Session services which should run early before herbstluftwm is brought up
+Documentation=man:systemd.special(7)
+Wants=urxvtd.socket xkbmap.service xss-lock.service
+BindsTo=herbstluftwm.service
+PartOf=herbstluftwm.target
+After=herbstluftwm.target
+Before=herbstluftwm.service
+RefuseManualStart=yes

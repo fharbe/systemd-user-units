@@ -1,0 +1,15 @@
+[Unit]
+Description=Barpyrus status bar
+Documentation=https://github.com/t-wissmann/barpyrus
+PartOf=graphical-session.target
+PartOf=herbstluftwm.target
+After=herbstluftwm.target
+
+[Service]
+Type=simple
+ExecStart=%E/herbstluftwm/barpyrus/barpyrus.py %I
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=herbstluftwm.target
