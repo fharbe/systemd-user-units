@@ -1,0 +1,12 @@
+[Unit]
+Description=xset - user preference utility for X
+Documentation=man:xset(1)
+PartOf=graphical-session.target xset.service
+After=graphical-session.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/xset +dpms dpms 0 0 600
+
+[Install]
+WantedBy=graphical-session.target

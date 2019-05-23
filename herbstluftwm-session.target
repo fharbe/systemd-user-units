@@ -1,7 +1,7 @@
 [Unit]
 Description=Session services which should run early before herbstluftwm is brought up
 Documentation=man:systemd.special(7)
-Wants=compton@0.service urxvtd.socket unclutter.service xss-lock.service
+Wants=compton@0.service urxvtd.socket unclutter.service xss-lock.service xset.service
 BindsTo=herbstluftwm.service
 PartOf=herbstluftwm.target
 After=herbstluftwm.target

@@ -1,0 +1,13 @@
+[Unit]
+Description=xset - user preference utility for X
+Documentation=man:xset(1)
+PartOf=graphical-session.target xset.service
+After=graphical-session.target
+ConditionPathExists=%h/.fonts
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/xset fp default +fp %h/.fonts
+
+[Install]
+WantedBy=graphical-session.target
