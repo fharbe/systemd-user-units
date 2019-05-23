@@ -2,4 +2,5 @@
 Description=Configure desktop for herbstluftwm
 Requires=xrandr-magic@.service hlwm-panels.service
 Requisite=herbstluftwm.service herbstluftwm-session.target
+After=herbstluftwm-session.target
 StopWhenUnneeded=yes
