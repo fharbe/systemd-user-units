@@ -7,7 +7,7 @@ RefuseManualStart=yes
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStop=/bin/systemctl --no-block --user start undock.target
+ExecStop=/bin/systemctl --user --no-block start undock.target
 
 [Install]
 WantedBy=dock.target
