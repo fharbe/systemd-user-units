@@ -4,7 +4,6 @@ Documentation=man:xmodmap(1)
 PartOf=graphical-session.target
 After=graphical-session.target
 After=xkbmap.service
-RefuseManualStart=yes
 
 [Service]
 Type=oneshot
