@@ -8,7 +8,7 @@ Conflicts=compton@.service
 [Service]
 Type=simple
 ExecStart=/usr/bin/compton --config %E/compton/compton.conf
-Restart=on-failure
+Restart=always
 RestartSec=2
 
 [Install]

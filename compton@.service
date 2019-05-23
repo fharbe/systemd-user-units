@@ -9,7 +9,7 @@ Conflicts=compton.service
 Type=dbus
 BusName=com.github.chjj.compton._%I
 ExecStart=/usr/bin/compton -d :%I --config %E/compton/compton.conf --dbus
-Restart=on-failure
+Restart=always
 RestartSec=2
 
 [Install]
