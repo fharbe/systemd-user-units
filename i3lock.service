@@ -1,0 +1,17 @@
+[Unit]
+Description=i3lock -- improved screen locker
+Documentation=man:i3lock(1) man:xss-lock(1)
+PartOf=graphical-session.target
+After=graphical-session.target
+
+[Service]
+Type=simple
+EnvironmentFile=%E/i3lock/i3lock.conf
+ExecStartPre=/usr/bin/xset +dpms dpms 0 0 ${DPMSTimeoutSec}
+ExecStart=/usr/bin/i3lock -n $RunArgs -c ${LockColor}
+ExecStopPost=/bin/systemctl --user start xset-dpms.service
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=sleep.target
