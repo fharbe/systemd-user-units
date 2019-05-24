@@ -6,7 +6,7 @@ After=graphical-session.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/redshift
+ExecStart=/usr/bin/redshift -v -c %E/redshift/redshift.conf
 
 [Install]
 WantedBy=graphical-session.target
