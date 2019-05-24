@@ -3,11 +3,12 @@ Description=XScreenSaver Utility
 Documentation=man:xss-lock(1)
 PartOf=graphical-session.target
 After=graphical-session.target
+Before=xset-xss.service
 
 [Service]
 Type=simple
 Environment="UTILS=%E/herbstluftwm/utils"
-ExecStart=/usr/bin/xss-lock --ignore-sleep -l -s ${XDG_SESSION_ID} -n ${UTILS}/dim-screen.sh -- ${UTILS}/i3lock.sh
+ExecStart=/usr/bin/xss-lock --ignore-sleep -s ${XDG_SESSION_ID} -n ${UTILS}/dim-screen.sh -- systemctl --user start i3lock.service
 Restart=on-failure
 RestartSec=2
 
