@@ -1,0 +1,8 @@
+[Unit]
+Description=Dock helper service
+
+[Path]
+PathExists=/dev/thinkpad/dock
+
+[Install]
+WantedBy=paths.target
