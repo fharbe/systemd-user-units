@@ -1,8 +1,8 @@
 [Unit]
 Description=Services which should run when machine is docked
-BindsTo=dev-thinkpad_dock.device
+BindsTo=dev-thinkpad-dock.device
 Conflicts=undock.target
-After=dev-thinkpad_dock.device
+After=dev-thinkpad-dock.device
 
 [Install]
-WantedBy=dev-thinkpad_dock.device
+WantedBy=dev-thinkpad-dock.device
