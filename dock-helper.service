@@ -1,6 +1,6 @@
 [Unit]
 Description=Dock helper service
-PartOf=dock.target
+BindsTo=dock.target
 After=dock.target
 RefuseManualStart=yes
 
