@@ -1,6 +1,7 @@
 [Unit]
 Description=Barpyrus status bar
 Documentation=https://github.com/t-wissmann/barpyrus
+BindsTo=panels.target
 PartOf=graphical-session.target
 PartOf=herbstluftwm.target
 After=herbstluftwm.target

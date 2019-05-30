@@ -1,0 +1,4 @@
+[Unit]
+Description=Panels
+Documentation=man:systemd.special(7)
+StopWhenUnneeded=yes
