@@ -6,7 +6,9 @@ After=graphical-session.target
 RequiresMountsFor=%t
 
 [Socket]
-ListenStream=%t/urxvtd-%H.sock
+ListenStream=%t/urxvt/urxvtd-%H.sock
+SocketMode=0600
+DirectoryMode=0700
 
 [Install]
 WantedBy=sockets.target

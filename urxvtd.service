@@ -8,7 +8,7 @@ RequiresMountsFor=%t
 
 [Service]
 Type=simple
-Environment=RXVT_SOCKET=%t/urxvtd-%H.sock
+Environment=RXVT_SOCKET=%t/urxvt/urxvtd-%H.sock
 ExecStart=/usr/bin/urxvtd -q -o
 KillMode=control-group
 Restart=on-failure
