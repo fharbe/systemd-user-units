@@ -3,7 +3,6 @@ Description=URxvt terminal daemon (socket activation)
 Documentation=man:urxvtd(1) man:urxvt(1)
 PartOf=graphical-session.target
 After=graphical-session.target
-RequiresMountsFor=%t
 
 [Socket]
 ListenStream=%t/urxvt/urxvtd-%H.sock

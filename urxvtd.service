@@ -4,7 +4,6 @@ Documentation=man:urxvtd(1) man:urxvt(1)
 Requires=urxvtd.socket
 PartOf=graphical-session.target
 After=graphical-session.target
-RequiresMountsFor=%t
 
 [Service]
 Type=simple
