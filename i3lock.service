@@ -1,8 +1,9 @@
 [Unit]
 Description=i3lock -- improved screen locker
 Documentation=man:i3lock(1) man:xss-lock(1)
-PartOf=graphical-session.target
-After=graphical-session.target
+PartOf=lock.target
+After=lock.target
+RefuseManualStop=yes
 
 [Service]
 Type=simple
@@ -14,4 +15,5 @@ Restart=on-failure
 RestartSec=2
 
 [Install]
+WantedBy=lock.target
 WantedBy=sleep.target

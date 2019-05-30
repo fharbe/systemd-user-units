@@ -8,7 +8,7 @@ Before=xset-xss.service
 [Service]
 Type=simple
 Environment="UTILS=%E/herbstluftwm/utils"
-ExecStart=/usr/bin/xss-lock --ignore-sleep -s ${XDG_SESSION_ID} -n ${UTILS}/dim-screen.sh -- systemctl --user start i3lock.service
+ExecStart=/usr/bin/xss-lock -s ${XDG_SESSION_ID} --ignore-sleep -n ${UTILS}/dim-screen.sh -- systemctl --user --wait start lock.target
 Restart=on-failure
 RestartSec=2
 
