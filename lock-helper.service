@@ -1,0 +1,14 @@
+[Unit]
+Description=Lock helper service
+BindsTo=lock.target
+After=lock.target
+RefuseManualStart=yes
+RefuseManualStop=yes
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStop=/bin/systemctl --user --no-block start unlock.target
+
+[Install]
+WantedBy=lock.target

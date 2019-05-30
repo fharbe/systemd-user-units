@@ -1,0 +1,7 @@
+[Unit]
+Description=Services which should run when session is locked
+Requires=lock-helper.service
+BindsTo=graphical-session.target i3lock.service
+Conflicts=unlock.target
+After=graphical-session.target
+StopWhenUnneeded=yes

@@ -1,0 +1,4 @@
+[Unit]
+Description=Services which should run when session is unlocked
+Conflicts=lock.target
+StopWhenUnneeded=yes
