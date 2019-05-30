@@ -3,6 +3,7 @@ Description=Dock helper service
 BindsTo=dock.target
 After=dock.target
 RefuseManualStart=yes
+RefuseManualStop=yes
 
 [Service]
 Type=oneshot

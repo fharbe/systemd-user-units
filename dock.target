@@ -1,8 +1,10 @@
 [Unit]
 Description=Services which should run when machine is docked
+Requires=dock-helper.service
 BindsTo=dev-thinkpad-dock.device
 Conflicts=undock.target
 After=dev-thinkpad-dock.device
+ConditionACPower=yes
 
 [Install]
 WantedBy=dev-thinkpad-dock.device
