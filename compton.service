@@ -3,7 +3,6 @@ Description=Compton X11 compositor
 Documentation=man:compton(1) man:compton-trans(1)
 PartOf=graphical-session.target
 After=graphical-session.target
-Conflicts=compton@.service
 
 [Service]
 Type=simple
