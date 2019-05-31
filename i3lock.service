@@ -2,6 +2,7 @@
 Description=i3lock -- improved screen locker
 Documentation=man:i3lock(1) man:xss-lock(1)
 PartOf=lock.target
+Conflicts=unclutter.service
 After=lock.target
 RefuseManualStop=yes
 
@@ -10,7 +11,8 @@ Type=simple
 EnvironmentFile=%E/i3lock/i3lock.conf
 ExecStartPre=/usr/bin/xset +dpms dpms 0 0 ${DPMSTimeoutSec}
 ExecStart=/usr/bin/i3lock -n $RunArgs -c ${LockColor}
-ExecStopPost=/bin/systemctl --user start xset-dpms.service
+ExecStopPost=/bin/systemctl --user --no-block start xset-dpms.service
+ExecStopPost=/bin/systemctl --user --no-block start unclutter.service
 Restart=on-failure
 RestartSec=2
 
