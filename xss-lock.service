@@ -9,7 +9,7 @@ Before=xset-xss.service
 Type=simple
 Environment="UTILS=%E/herbstluftwm/utils"
 ExecStart=/usr/bin/xss-lock -s ${XDG_SESSION_ID} --ignore-sleep -n ${UTILS}/dim-screen.sh -- systemctl --user --wait start lock.target
-Restart=on-failure
+Restart=always
 RestartSec=2
 
 [Install]
