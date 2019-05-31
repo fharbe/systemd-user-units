@@ -6,7 +6,7 @@ After=graphical-session.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/compton --config %E/compton/compton.conf
+ExecStart=/usr/bin/compton -d ${DISPLAY} --config %E/compton/compton.conf
 Restart=always
 RestartSec=2
 
