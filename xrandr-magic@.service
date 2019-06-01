@@ -7,7 +7,7 @@ Before=hlwm-panels.service
 
 [Service]
 Type=oneshot
-ExecStart=%E/herbstluftwm/utils/xrandr-magic %I
+ExecStart=%h/bin/xrandr-magic %I
 ExecStartPost=/bin/sleep 0.2
 
 [Install]
