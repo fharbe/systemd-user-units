@@ -9,8 +9,8 @@ RefuseManualStop=yes
 [Service]
 Type=simple
 EnvironmentFile=%E/i3lock/i3lock.conf
-ExecStartPre=/usr/bin/xset +dpms dpms 0 0 ${DPMSTimeoutSec}
-ExecStart=/usr/bin/i3lock -n $RunArgs -c ${LockColor}
+ExecStartPre=/usr/bin/xset +dpms dpms 0 0 ${DPMS_TIMEOUT}
+ExecStart=/usr/bin/i3lock -n $RUNARGS -c ${LOCK_COLOR}
 ExecStopPost=/bin/systemctl --user --no-block start xset-dpms.service
 ExecStopPost=/bin/systemctl --user --no-block start unclutter.service
 Restart=on-failure
