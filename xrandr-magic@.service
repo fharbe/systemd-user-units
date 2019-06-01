@@ -1,8 +1,7 @@
 [Unit]
 Description=XRandR magic script
 Documentation=man:xrandr(1)
-Requisite=graphical-session.target
-PartOf=reload-desktop@.target
+PartOf=graphical-session.target
 After=graphical-session.target
 Before=hlwm-panels.service
 
