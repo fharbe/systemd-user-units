@@ -1,4 +1,5 @@
 [Unit]
 Description=Services which should run when session is unlocked
+Documentation=man:systemd.special(7)
 Conflicts=lock.target
 StopWhenUnneeded=yes

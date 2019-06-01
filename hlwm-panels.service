@@ -1,5 +1,6 @@
 [Unit]
 Description=Detect monitors and (re-)start panels for herbstluftwm
+Documentation=man:herbstluftwm(1) https://github.com/t-wissmann/barpyrus
 Requisite=herbstluftwm.service herbstluftwm-session.target
 PartOf=panels.target reload-desktop@.target
 After=xrandr-magic@.service

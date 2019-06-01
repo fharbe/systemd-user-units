@@ -1,5 +1,6 @@
 [Unit]
 Description=Services which should run when machine is docked
+Documentation=man:systemd.special(7)
 Requires=dock-helper.service
 BindsTo=dev-thinkpad-dock.device
 Conflicts=undock.target
