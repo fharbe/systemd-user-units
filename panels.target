@@ -1,4 +1,5 @@
 [Unit]
 Description=Panels
 Documentation=man:systemd.special(7)
+Requires=hlwm-panels.service
 StopWhenUnneeded=yes
